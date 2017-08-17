@@ -1,0 +1,47 @@
+# 2014-Spring
+
+## Paper
+  [http://www-bcf.usc.edu/~mathgp/quals/statistics_a/all_medium.pdf](http://www-bcf.usc.edu/~mathgp/quals/statistics_a/all_medium.pdf)
+
+## Problem 1
+
+
+### Part 1(a)
+Let $S$ represent the $n$ sized set chosen:
+
+$P(S=s_n) = \frac{1}{\binom{N}{n}}$
+
+
+### Part 1(b)
+
+$E[I_i] = P(I_i=1) = \frac{\binom{N-1}{n-1}}{\binom{N}{n}} = \frac{n}{N}$
+
+$E[I_iI_j] = \frac{\binom{N-2}{n-2}}{\binom{N}{n}} = \frac{n(n-1)}{N(N-1)}$
+
+$Cov(I_i, I_j)  = E[I_iI_j]-E[I_i]E[I_j] = \frac{n(n-1)}{N(N-1)} - (\frac{n}{N})^2 = \frac{n(n-N)}{N(N-1)}$
+
+
+### Part 1(c)
+
+$EW = E\sum_{i=1}^N a_iI_i = \sum_{i=1}^NE[a_iI_1] = \sum a_i\frac{n}{N} = \frac{\sum a_in}{N}$
+
+$EW^2 = E(\sum_i a_iI_i)^2 = E[\sum_i a_i^2I_i + 2\sum_{i>j}a_ia_jI_iI_j] =\sum_i a_i^2 \frac{n}{N} + 2 \sum_{i>j}a_ia_j \frac{n(n-1)}{N(N-1)} $
+
+$Var(W) = \sum_i a_i^2 \frac{n}{N} + 2 \sum_{i>j}a_ia_j \frac{n(n-1)}{N(N-1)} - (\frac{\sum a_in}{N})^2$
+
+$Var(W) =  $
+### Part 1(d)
+
+For $W$ to be hypergeomettrc, $a_i = \{0, 1\}$ like marbles in an urn (red = 0, black = 1) and *all distinct*.
+
+Then $W$ represents the number of black marbles among the picked $n$ marbles from the original $B$ black and $N-B$ red marbles
+
+$P(W=x) = \frac{\binom{B}{x}\binom{N-B}{n-x}}{\binom{N}{n}}$
+
+$EW = \frac{Bn}{N}$
+
+$Var(W) = \sum_i a_i^2 \frac{n}{N} + 2 \sum_{i>j}a_ia_j \frac{n(n-1)}{N(N-1)} - (\frac{\sum a_in}{N})^2 = B\frac{n}{N} + 2 \binom{B}{2} \frac{n(n-1)}{N(N-1)} - (\frac{Bn}{N})^2 = \frac{BnN(N-1) + n(n-1)B(B-1)-B^2n^2(N-1)}{N(N-1)}$
+
+... Incorrect
+
+
