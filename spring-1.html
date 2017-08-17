@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
+<link rel="prev" href="spring.html">
 
-<link rel="next" href="spring.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -92,20 +92,38 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<!--bookdown:title:end-->
-<!--bookdown:title:start-->
-<div id="math-541a-screening-solutions" class="section level1 unnumbered">
-<h1>MATH-541A Screening Solutions</h1>
-<p>Solutions to MATH-541A screening exams are provided. They are indexed by (year, semester).</p>
+<div id="spring-1" class="section level1">
+<h1><span class="header-section-number">2</span> 2014-Spring</h1>
+<div id="paper-1" class="section level2">
+<h2><span class="header-section-number">2.1</span> Paper</h2>
+<p><a href="http://www-bcf.usc.edu/~mathgp/quals/20141/20141_541a.pdf" class="uri">http://www-bcf.usc.edu/~mathgp/quals/20141/20141_541a.pdf</a></p>
+</div>
+<div id="problem-1-1" class="section level2">
+<h2><span class="header-section-number">2.2</span> Problem 1</h2>
+<p>Given:</p>
+<p><span class="math inline">\(x_{i,1}, x_{i,2}\)</span> : Known values For <span class="math inline">\(1 \leq i \leq n\)</span>: $Z_i = <em>1x</em>{i,1} +_i $ and <span class="math inline">\(Y_i = \beta_1x_{i,1} +\beta_2x_{i,2} + \epsilon_i\)</span> <span class="math inline">\(\epsilon_i \sim N(0,1)\)</span> ### (a) Given <span class="math inline">\({\bf{Z}} =(Z_1,Z_2,\dots,Z_n)\)</span> find MLE estimate of <span class="math inline">\(\beta_1\)</span>:</p>
+<p>Since, <span class="math inline">\(\epsilon_i \sim N(0,1)\)</span> <span class="math inline">\(\implies\)</span> <span class="math inline">\(Z_i \sim N(\beta_1x_{i,1}, 1)\)</span> for given <span class="math inline">\(\beta_1\)</span> The likelihood function is given by:</p>
+<p><span class="math inline">\(L(\beta_1|\textbf{Z}) = \frac{e^{-\sum_{i=1}^{n}\big(\frac{Z_i-\beta_1x_{i,1}}{2}\big)^2}}{(\sqrt{2\pi})^n}\)</span></p>
+<p><span class="math inline">\(LL = log(L(\beta_1|\textbf{Z})) = -\sum_{i=1}^{n}\big(\frac{Z_i-\beta_1x_{i,1}}{2}\big)^2 - \frac{n}{2}log(2\pi)\)</span></p>
+<p><span class="math inline">\(\frac{dLL}{d\beta_1} = \sum_{i=1}^n (Z_i-\beta_1x_{i,1})x_{i,1}\)</span></p>
+<p>and hence</p>
+<p><span class="math inline">\(\hat\beta_1 = \frac{\sum Z_ix_{i,1}}{\sum x_{i,1}^2}\)</span></p>
+<p><span class="math inline">\(\frac{d^2LL}{d\beta_1} = -\sum x_{i,1}^2\)</span> and hence <span class="math inline">\(\hat \beta_1\)</span> is in fact attains the maxima.</p>
+<p>Now, <span class="math inline">\(E\hat\beta_1 = \frac{E(\sum Z_ix_{i,1})}{\sum x_{i,1}^2} = \frac{\sum x_{i,1}E(Z_i)}{\sum x_{i,1}^2} = \beta_1\)</span></p>
+<p>and hence the MLE estimate pf <span class="math inline">\(\hat \beta_1\)</span> is an unibased estimator of <span class="math inline">\(\beta_1\)</span></p>
+<div id="todo-cramer-rao-condition-check" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> TODO Cramer-Rao Condition check?</h3>
 
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="spring.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="spring.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

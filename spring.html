@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title></title>
   <meta name="description" content="">
-  <meta name="generator" content="bookdown 0.3.9 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.4.3 and GitBook 2.6.7">
 
   <meta property="og:title" content="" />
   <meta property="og:type" content="book" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="index.html">
-
+<link rel="next" href="spring-1.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -64,7 +64,15 @@
 <li class="chapter" data-level="1" data-path="spring.html"><a href="spring.html"><i class="fa fa-check"></i><b>1</b> 2014-Spring</a><ul>
 <li class="chapter" data-level="1.1" data-path="spring.html"><a href="spring.html#paper"><i class="fa fa-check"></i><b>1.1</b> Paper</a></li>
 <li class="chapter" data-level="1.2" data-path="spring.html"><a href="spring.html#problem-1"><i class="fa fa-check"></i><b>1.2</b> Problem 1</a><ul>
-<li class="chapter" data-level="1.2.1" data-path="spring.html"><a href="spring.html#todo-cramer-rao-condition-check"><i class="fa fa-check"></i><b>1.2.1</b> TODO Cramer-Rao Condition check?</a></li>
+<li class="chapter" data-level="1.2.1" data-path="spring.html"><a href="spring.html#part-1a"><i class="fa fa-check"></i><b>1.2.1</b> Part 1(a)</a></li>
+<li class="chapter" data-level="1.2.2" data-path="spring.html"><a href="spring.html#part-1b"><i class="fa fa-check"></i><b>1.2.2</b> Part 1(b)</a></li>
+<li class="chapter" data-level="1.2.3" data-path="spring.html"><a href="spring.html#part-1c"><i class="fa fa-check"></i><b>1.2.3</b> Part 1(c)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="spring-1.html"><a href="spring-1.html"><i class="fa fa-check"></i><b>2</b> 2014-Spring</a><ul>
+<li class="chapter" data-level="2.1" data-path="spring-1.html"><a href="spring-1.html#paper-1"><i class="fa fa-check"></i><b>2.1</b> Paper</a></li>
+<li class="chapter" data-level="2.2" data-path="spring-1.html"><a href="spring-1.html#problem-1-1"><i class="fa fa-check"></i><b>2.2</b> Problem 1</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="spring-1.html"><a href="spring-1.html#todo-cramer-rao-condition-check"><i class="fa fa-check"></i><b>2.2.1</b> TODO Cramer-Rao Condition check?</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -88,23 +96,33 @@
 <h1><span class="header-section-number">1</span> 2014-Spring</h1>
 <div id="paper" class="section level2">
 <h2><span class="header-section-number">1.1</span> Paper</h2>
-<p><a href="http://www-bcf.usc.edu/~mathgp/quals/20141/20141_541a.pdf" class="uri">http://www-bcf.usc.edu/~mathgp/quals/20141/20141_541a.pdf</a></p>
+<p><a href="http://www-bcf.usc.edu/~mathgp/quals/statistics_a/all_medium.pdf" class="uri">http://www-bcf.usc.edu/~mathgp/quals/statistics_a/all_medium.pdf</a></p>
 </div>
 <div id="problem-1" class="section level2">
 <h2><span class="header-section-number">1.2</span> Problem 1</h2>
-<p>Given:</p>
-<p><span class="math inline">\(x_{i,1}, x_{i,2}\)</span> : Known values For <span class="math inline">\(1 \leq i \leq n\)</span>: $Z_i = <em>1x</em>{i,1} +_i $ and <span class="math inline">\(Y_i = \beta_1x_{i,1} +\beta_2x_{i,2} + \epsilon_i\)</span> <span class="math inline">\(\epsilon_i \sim N(0,1)\)</span> ### (a) Given <span class="math inline">\({\bf{Z}} =(Z_1,Z_2,\dots,Z_n)\)</span> find MLE estimate of <span class="math inline">\(\beta_1\)</span>:</p>
-<p>Since, <span class="math inline">\(\epsilon_i \sim N(0,1)\)</span> <span class="math inline">\(\implies\)</span> <span class="math inline">\(Z_i \sim N(\beta_1x_{i,1}, 1)\)</span> for given <span class="math inline">\(\beta_1\)</span> The likelihood function is given by:</p>
-<p><span class="math inline">\(L(\beta_1|\textbf{Z}) = \frac{e^{-\sum_{i=1}^{n}\big(\frac{Z_i-\beta_1x_{i,1}}{2}\big)^2}}{(\sqrt{2\pi})^n}\)</span></p>
-<p><span class="math inline">\(LL = log(L(\beta_1|\textbf{Z})) = -\sum_{i=1}^{n}\big(\frac{Z_i-\beta_1x_{i,1}}{2}\big)^2 - \frac{n}{2}log(2\pi)\)</span></p>
-<p><span class="math inline">\(\frac{dLL}{d\beta_1} = \sum_{i=1}^n (Z_i-\beta_1x_{i,1})x_{i,1}\)</span></p>
-<p>and hence</p>
-<p><span class="math inline">\(\hat\beta_1 = \frac{\sum Z_ix_{i,1}}{\sum x_{i,1}^2}\)</span></p>
-<p><span class="math inline">\(\frac{d^2LL}{d\beta_1} = -\sum x_{i,1}^2\)</span> and hence <span class="math inline">\(\hat \beta_1\)</span> is in fact attains the maxima.</p>
-<p>Now, <span class="math inline">\(E\hat\beta_1 = \frac{E(\sum Z_ix_{i,1})}{\sum x_{i,1}^2} = \frac{\sum x_{i,1}E(Z_i)}{\sum x_{i,1}^2} = \beta_1\)</span></p>
-<p>and hence the MLE estimate pf <span class="math inline">\(\hat \beta_1\)</span> is an unibased estimator of <span class="math inline">\(\beta_1\)</span></p>
-<div id="todo-cramer-rao-condition-check" class="section level3">
-<h3><span class="header-section-number">1.2.1</span> TODO Cramer-Rao Condition check?</h3>
+<div id="part-1a" class="section level3">
+<h3><span class="header-section-number">1.2.1</span> Part 1(a)</h3>
+<p>Let <span class="math inline">\(S\)</span> represent the <span class="math inline">\(n\)</span> sized set chosen:</p>
+<p><span class="math inline">\(P(S=s_n) = \frac{1}{\binom{N}{n}}\)</span></p>
+</div>
+<div id="part-1b" class="section level3">
+<h3><span class="header-section-number">1.2.2</span> Part 1(b)</h3>
+<p><span class="math inline">\(E[I_i] = P(I_i=1) = \frac{\binom{N-1}{n-1}}{\binom{N}{n}} = \frac{n}{N}\)</span></p>
+<p><span class="math inline">\(E[I_iI_j] = \frac{\binom{N-2}{n-2}}{\binom{N}{n}} = \frac{n(n-1)}{N(N-1)}\)</span></p>
+<p><span class="math inline">\(Cov(I_i, I_j) = E[I_iI_j]-E[I_i]E[I_j] = \frac{n(n-1)}{N(N-1)} - (\frac{n}{N})^2 = \frac{n(n-N)}{N(N-1)}\)</span></p>
+</div>
+<div id="part-1c" class="section level3">
+<h3><span class="header-section-number">1.2.3</span> Part 1(c)</h3>
+<p><span class="math inline">\(EW = E\sum_{i=1}^N a_iI_i = \sum_{i=1}^NE[a_iI_1] = \sum a_i\frac{n}{N} = \frac{\sum a_in}{N}\)</span></p>
+<p>$EW^2 = E(_i a_iI_i)^2 = E[<em>i a_i^2I_i + 2</em>{i&gt;j}a_ia_jI_iI_j] =<em>i a_i^2  + 2 </em>{i&gt;j}a_ia_j  $</p>
+<p><span class="math inline">\(Var(W) = \sum_i a_i^2 \frac{n}{N} + 2 \sum_{i&gt;j}a_ia_j \frac{n(n-1)}{N(N-1)} - (\frac{\sum a_in}{N})^2\)</span></p>
+<p>$Var(W) = $ ### Part 1(d)</p>
+<p>For <span class="math inline">\(W\)</span> to be hypergeomettrc, <span class="math inline">\(a_i = \{0, 1\}\)</span> like marbles in an urn (red = 0, black = 1) and <em>all distinct</em>.</p>
+<p>Then <span class="math inline">\(W\)</span> represents the number of black marbles among the picked <span class="math inline">\(n\)</span> marbles from the original <span class="math inline">\(B\)</span> black and <span class="math inline">\(N-B\)</span> red marbles</p>
+<p><span class="math inline">\(P(W=x) = \frac{\binom{B}{x}\binom{N-B}{n-x}}{\binom{N}{n}}\)</span></p>
+<p><span class="math inline">\(EW = \frac{Bn}{N}\)</span></p>
+<p><span class="math inline">\(Var(W) = \sum_i a_i^2 \frac{n}{N} + 2 \sum_{i&gt;j}a_ia_j \frac{n(n-1)}{N(N-1)} - (\frac{\sum a_in}{N})^2 = B\frac{n}{N} + 2 \binom{B}{2} \frac{n(n-1)}{N(N-1)} - (\frac{Bn}{N})^2 = \frac{BnN(N-1) + n(n-1)B(B-1)-B^2n^2(N-1)}{N(N-1)}\)</span></p>
+<p>… Incorrect</p>
 
 </div>
 </div>
@@ -114,8 +132,8 @@
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="spring-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -126,7 +144,7 @@
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
 <script>
-require(["gitbook"], function(gitbook) {
+gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
 "github": false,
@@ -160,7 +178,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(script.src))
       script.src  = script.src.replace(/^https?:/, '');
     document.getElementsByTagName("head")[0].appendChild(script);
